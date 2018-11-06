@@ -1,0 +1,802 @@
+{
+  "settings": {
+    "name": "Sports AMP",
+    "currentPage": "photos.html",
+    "theme": {
+      "name": "mobirise-amp",
+      "title": "Mobirise AMP",
+      "styling": {
+        "primaryColor": "#4ea2e3",
+        "secondaryColor": "#4addff",
+        "successColor": "#0dcd7b",
+        "infoColor": "#8282e7",
+        "warningColor": "#767676",
+        "dangerColor": "#a0a0a0",
+        "mainFont": "Roboto",
+        "display1Font": "Open Sans",
+        "display1Size": "3",
+        "display2Font": "Open Sans",
+        "display2Size": 2.2,
+        "display5Font": "Open Sans",
+        "display5Size": 1.8,
+        "display7Font": "Open Sans",
+        "display7Size": "1.125",
+        "display4Font": "Open Sans",
+        "display4Size": 0.9,
+        "isRoundedButtons": true
+      },
+      "additionalSetColors": [
+        "#15181b",
+        "#0054a6",
+        "#c41313",
+        "#1580ea"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.7.10",
+    "siteFonts": [
+      {
+        "css": "'Open Sans', sans-serif",
+        "name": "Open Sans",
+        "url": "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+      }
+    ],
+    "uniqCompNum": 37,
+    "versionPublish": "4.8.6",
+    "screenshot": "screenshot.png",
+    "favicon": "@PROJECT_PATH@/assets/images/sports-favicon-16x16.png",
+    "noImageResize": "",
+    "cookiesAlert": "",
+    "gdpr": "",
+    "google-analytics": "",
+    "siteUrl": "undefined"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "amp-sidebar": {
+              "min-width": "260px!important",
+              "z-index": "1050!important",
+              "background-color": "@menuBgColor"
+            },
+            "amp-sidebar.open:after": {
+              "content": "''",
+              "position": "absolute",
+              "top": "0",
+              "left": "0",
+              "bottom": "0",
+              "right": "0",
+              "background-color": "red"
+            },
+            ".open": {
+              "transform": "translateX(0%) !important",
+              "display": "block!important"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor",
+              "position": "relative",
+              "height": "100vh",
+              "z-index": "1030",
+              "padding": "1rem 2rem",
+              "max-width": "20rem"
+            },
+            ".headerbar": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "center",
+              "padding": ".5rem 1rem",
+              "min-height": "70px",
+              "align-items": "center",
+              "background": "@menuBgColor",
+              "&.sticky-nav": {
+                "position": "fixed",
+                "z-index": "1000",
+                "width": "100%"
+              }
+            },
+            "button.sticky-but": {
+              "position": "fixed"
+            },
+            ".brand": {
+              "display": "flex",
+              "align-items": "center",
+              "align-self": "flex-start",
+              "padding-right": "30px",
+              "p": {
+                "margin": "0",
+                "padding": "0"
+              }
+            },
+            ".brand-name": {
+              "color": "#ffffff"
+            },
+            ".sidebar": {
+              "padding": "1rem 0",
+              "margin": "0"
+            },
+            ".sidebar > li": {
+              "list-style": "none",
+              "display": "flex",
+              "flex-direction": "column"
+            },
+            ".sidebar a": {
+              "display": "block",
+              "text-decoration": "none",
+              "margin-bottom": "10px"
+            },
+            ".close-sidebar": {
+              "width": "30px",
+              "height": "30px",
+              "position": "relative",
+              "cursor": "pointer",
+              "background-color": "transparent",
+              "border": "none",
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "position": "absolute",
+                "left": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "transform": "rotate(45deg)"
+                },
+                "&:nth-child(2)": {
+                  "transform": "rotate(-45deg)"
+                }
+              }
+            },
+            "@media (min-width: 992px)": {
+              "& .brand-name": {
+                "min-width": "8rem"
+              },
+              "& .builder-sidebar": {
+                "margin-left": "auto",
+                ".sidebar li": {
+                  "flex-direction": "row",
+                  "flex-wrap": "wrap",
+                  "a": {
+                    "padding": ".5rem",
+                    "margin": "0"
+                  }
+                }
+              },
+              "& .builder-overlay": {
+                "display": "none !important"
+              }
+            },
+            ".hamburger": {
+              "position": "absolute",
+              "top": "25px",
+              "& when (@showLogo)": {
+                "@media (min-width: 768px)": {
+                  "top": "calc(0.5rem ~\"+\" @logoHeight ~\"*\" 0.5px ~\"-\" 10px)"
+                }
+              },
+              "right": "20px",
+              "margin-left": "auto",
+              "width": "30px",
+              "height": "20px",
+              "background": "none",
+              "border": "none",
+              "cursor": "pointer",
+              "z-index": "1000",
+              "&:focus": {
+                "outline": "none"
+              },
+              "span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "amp-img": {
+              "height": "~\"@{logoHeight}px\"",
+              "width": "~\"@{logoWidth}px\"",
+              "margin-right": "1rem",
+              "display": "flex",
+              "align-items": "center",
+              "@media (max-width: 768px)": {
+                "max-height": "55px",
+                "max-width": "55px"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global=\"\" once=\"menu\" always-top=\"\" position-absolute=\"\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n        <input type=\"range\" title=\"Logo Height\" inline=\"\" name=\"logoHeight\" min=\"55\" max=\"120\" value=\"55\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline=\"\" name=\"logoWidth\" min=\"55\" max=\"120\" value=\"120\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\">\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\" selected=\"\">Left</option>\n            <option value=\"right\">Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#0055a5\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"headerbar\" mbr-class=\"{'sticky-nav':sticky}\">\n      <div class=\"brand\">\n          <span mbr-if=\"showLogo\" class=\"brand-logo\">\n              <amp-img src=\"@PROJECT_PATH@/assets/images/logo-abs-cbn.png\" layout=\"responsive\" width=\"121.20689655172414\" height=\"19\" alt=\"Mobirise\">\n                  <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/logo-abs-cbn.png\" alt=\"Mobirise\" title=\"\">\n              </amp-img>\n          </span>\n          <p mbr-text=\"\" mbr-theme-style=\"display-7\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style\" data-app-selector=\".brand-name\">SPORTS</p>\n      </div>\n    </nav>\n    <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n        <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n            <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n                <span></span>\n                <span></span>\n            </button>\n\n            <div mbr-menu=\"\" class=\"sidebar mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\"><a class=\"text-white\" href=\"https://sports.abs-cbn.com/\" data-app-placeholder=\"Type Text\" target=\"_blank\">HOME</a>\n              <a class=\"text-white\" href=\"https://sports.abs-cbn.com/news\" data-app-placeholder=\"Type Text\" target=\"_blank\">NEWS</a>\n              <a class=\"text-white\" href=\"https://sports.abs-cbn.com/uaap\" data-app-placeholder=\"Type Text\" target=\"_blank\">UAAP</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/ncaa\" data-app-placeholder=\"Type Text\" target=\"_blank\">NCAA</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/pvl\" data-app-placeholder=\"Type Text\" target=\"_blank\">PVL</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/nba\" data-app-placeholder=\"Type Text\" target=\"_blank\">NBA</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/pba\" data-app-placeholder=\"Type Text\" target=\"_blank\">PBA</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/basketball\" data-app-placeholder=\"Type Text\" target=\"_blank\">BASKETBALL</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/volleyball\" data-app-placeholder=\"Type Text\" target=\"_blank\">VOLLEYBALL</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/onechampionship\" data-app-placeholder=\"Type Text\" target=\"_blank\">ONE CHAMPIONSHIP</a>  <a class=\"text-white\" href=\"https://sports.abs-cbn.com/photos\" data-app-placeholder=\"Type Text\" target=\"_blank\">PHOTOS</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/videos\" data-app-placeholder=\"Type Text\" target=\"_blank\">VIDEOS</a></div>\n            \n            <div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn align-center\">\n              <a class=\"btn btn-sm btn-primary\" href=\"https://mobirise.com\">Contact Us</a>\n            </div>\n        </div>\n    </amp-sidebar>\n    <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-class=\"{'sticky-but':sticky}\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </button>\n</section>",
+          "_cid": "r8uEe410EO",
+          "_anchor": "menu1-0",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-title": {
+              "padding-bottom": "1rem",
+              "color": "#c41313",
+              "text-align": "left"
+            },
+            ".mbr-section-btn": {
+              "padding-top": "1.5rem"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <h2 mbr-if=\"showTitle\" class=\"mbr-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-title\">\n            FOOTBALL</h2>\n        <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n            <i>Shape your future web project with sharp design and refine coded functions.</i>\n        </h3>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n            <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8AEA0QSlV",
+          "_anchor": "content1-8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-title": {
+              "padding-bottom": "1rem",
+              "text-align": "left"
+            },
+            ".mbr-section-btn": {
+              "padding-top": "1.5rem"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <h2 mbr-if=\"showTitle\" class=\"mbr-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-title\">Paris Saint-Germain challenges UEFA in court<br>\n        </h2>\n        <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n            <i>Shape your future web project with sharp design and refine coded functions.</i>\n        </h3>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n            <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8uEXsH4mM",
+          "_anchor": "content1-6",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-title": {
+              "padding-bottom": "1rem",
+              "text-align": "left"
+            },
+            ".mbr-section-btn": {
+              "padding-top": "1.5rem"
+            },
+            ".mbr-title SPAN": {
+              "color": "#0054a6"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <h2 mbr-if=\"showTitle\" class=\"mbr-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-title\"><span style=\"font-weight: normal;\">By ABS-CBN Sports on Nov 06, 2018 07:57 A</span><span style=\"font-weight: normal;\">M</span></h2>\n        <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n            <i>Shape your future web project with sharp design and refine coded functions.</i>\n        </h3>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n            <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8ACAkKYl4",
+          "_anchor": "content1-6",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "& when not (@fullWidth)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "background-color": "@bgColor",
+            ".image-block": {
+              "margin": "auto",
+              "width": "~\"@{videoSize}%\"",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "amp-img": {
+              "text-align": "center"
+            },
+            ".mbr-text": {
+              "margin": "0",
+              "padding": ".5rem 0",
+              "& when (@fullWidth)": {
+                "padding": ".5rem 15px"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".image-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "image2",
+          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\" checked=\"\">\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"showText==true\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img src=\"@PROJECT_PATH@/assets/images/1541462277-ap18306797108843-small-2-780x585.jpg\" layout=\"responsive\" width=\"732\" height=\"549\" alt=\"Mobirise\">\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/1541462277-ap18306797108843-small-2-780x585.jpg\" alt=\"Mobirise\" title=\"\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-black align-center mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\"><i>\n                    PSG's Kylian Mbappe, left, reacts with PSG's Neymar, celebrating after he scored his side's second goal during the League One soccer match between Paris Saint-Germain and Lille at the Parc des Princes stadium in Paris, Friday, Nov. 2, 2018. (AP Photo/Thibault Camus)\n                </i></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8AMub4Z19",
+          "_anchor": "image2-m",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text": {
+              "margin-bottom": "0",
+              "color": "#15181b"
+            },
+            ".mbr-section-title": {
+              "margin": "0",
+              "color": "#15181b",
+              "text-align": "left"
+            }
+          },
+          "_name": "content2",
+          "_customHTML": "<section class=\"content2 mbr-section article\" plugins=\"amp-main\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-8\">\n                <h3 class=\"mbr-fonts-style mbr-section-title mbr-light\" mbr-if=\"showTitle\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-title\"></h3>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>By Graham Dunbar, Associated Press<br><br>GENEVA (AP) — Paris Saint-Germain has challenged UEFA in court after a club finance panel reopened its investigation into the French champion, and can assess transfer deals for superstar forwards Neymar and Kylian Mbappe.<br><br>The Court of Arbitration for Sport said on Monday the appeal case is confidential at the request of PSG and UEFA and gave no further details.<br><br>Qatar-owned PSG has long been a target of UEFA rules designed to curb so-called financial doping by wealthy backers of clubs which qualify for the Champions League or Europa League.<br><br>The Financial Fair Play program requires clubs to approach break-even on soccer-related business, such as player trading and wages, and also assesses the fair market value of sponsorship deals.<br><br>PSG forfeited 20 million euros ($22.8 million) of Champions League prize money in a 2014 settlement. Then, Abu Dhabi-owned Manchester City got the same deal from UEFA in signature cases from the first round of FFP sanctions.<br><br>Details of tough 2014 negotiations between both clubs and UEFA's then-leaders were revealed at the weekend by European media. Published emails included legal threats by the clubs trying to prevent possible bans from the Champions League worth tens of millions of euros per season.<br><br>In April 2017, UEFA released PSG and Man City from their settlement deals for complying with three years of stricter monitoring.<br><br>PSG then spent heavily in that offseason, breaking soccer's transfer record to buy Neymar from Barcelona for 222 million euros ($253 million). A loan deal was agreed with Monaco for Mbappe that became a 180 million euros ($205 million) purchase this year.<br><br>UEFA opened an investigation soon after the Mbappe loan, and warned PSG in June this year to raise cash quickly from player sales to balance its 2017-18 accounts. UEFA also said some sponsor deals, including from Qatar, were overvalued.<br><br>Still, investigators for UEFA's Club Financial Control Body closed their scrutiny of PSG's accounts for the year through June 2017 — before the Neymar signing.<br><br>The UEFA panel's judging chamber reviewed the decision and in September sent the case back for a \"deeper investigation.\" It is that move which PSG is challenging at CAS.<br><br>The sports court's judges must first decide if it is admissible to appeal a procedural step rather than a final ruling.<br><br>Joining PSG in a similar situation, Galatasaray was also placed under further investigation by the UEFA panel last month. It is unclear if the Turkish club has appealed to CAS.</p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8ABcxpH2Q",
+          "_anchor": "content2-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "h1": {
+              "margin-bottom": "20px"
+            },
+            ".wrapper": {
+              "text-align": "center"
+            },
+            "H1": {
+              "text-align": "center"
+            }
+          },
+          "_name": "social-share",
+          "_customHTML": "<section class=\"social-share\" group=\"Social\" plugins=\"amp-main,amp-social-share\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"checkbox\" title=\"Email\" name=\"email\">\n        <input type=\"checkbox\" title=\"Facebook\" name=\"facebook\" checked>\n        <input type=\"checkbox\" title=\"Google+\" name=\"gplus\">\n        <input type=\"checkbox\" title=\"Linkedin\" name=\"linkedin\">\n        <input type=\"checkbox\" title=\"Pinterest\" name=\"pinterest\">\n        <input type=\"checkbox\" title=\"Tumblr\" name=\"tumblr\">\n        <input type=\"checkbox\" title=\"Twitter\" name=\"twitter\" checked>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"wrapper\">\n        <h1 class=\"mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n            Share this page\n        </h1>\n        <amp-social-share type=\"email\" mbr-if=\"email\"></amp-social-share>\n        <amp-social-share type=\"facebook\" mbr-if=\"facebook\" data-param-app_id=\"254325784911610\"></amp-social-share>\n        <amp-social-share type=\"gplus\" mbr-if=\"gplus\"></amp-social-share>\n        <amp-social-share type=\"linkedin\" mbr-if=\"linkedin\"></amp-social-share>\n        <amp-social-share type=\"pinterest\" mbr-if=\"pinterest\" data-param-media=\"https://ampbyexample.com/img/amp.jpg\"></amp-social-share>\n        <amp-social-share type=\"tumblr\" mbr-if=\"tumblr\"></amp-social-share>\n        <amp-social-share type=\"twitter\" mbr-if=\"twitter\"></amp-social-share>\n    </div>\n</section>",
+          "_cid": "r8uFkHeIOy",
+          "_anchor": "social-share-9",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "p": {
+              "margin": "0",
+              "color": "#ffffff"
+            },
+            ".mbr-col-sm-12, .mbr-text": {
+              "text-align": "center"
+            }
+          },
+          "_name": "footer1",
+          "_customHTML": "<section class=\"footer1\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-col-sm-12 align-center mbr-white\">\n            <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-col-sm-12, .mbr-text\" data-app-placeholder=\"Type Text\">\n                © 2018 ABS-CBN Corporation. All Rights Reserved.\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8uHx9FJxX",
+          "_anchor": "footer1-a",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
+          "_params": {}
+        }
+      ]
+    },
+    "photos.html": {
+      "settings": {
+        "title": "Photos",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 1
+      },
+      "components": [
+        {
+          "_styles": {
+            "amp-sidebar": {
+              "min-width": "260px!important",
+              "z-index": "1050!important",
+              "background-color": "@menuBgColor"
+            },
+            "amp-sidebar.open:after": {
+              "content": "''",
+              "position": "absolute",
+              "top": "0",
+              "left": "0",
+              "bottom": "0",
+              "right": "0",
+              "background-color": "red"
+            },
+            ".open": {
+              "transform": "translateX(0%) !important",
+              "display": "block!important"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor",
+              "position": "relative",
+              "height": "100vh",
+              "z-index": "1030",
+              "padding": "1rem 2rem",
+              "max-width": "20rem"
+            },
+            ".headerbar": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "center",
+              "padding": ".5rem 1rem",
+              "min-height": "70px",
+              "align-items": "center",
+              "background": "@menuBgColor",
+              "&.sticky-nav": {
+                "position": "fixed",
+                "z-index": "1000",
+                "width": "100%"
+              }
+            },
+            "button.sticky-but": {
+              "position": "fixed"
+            },
+            ".brand": {
+              "display": "flex",
+              "align-items": "center",
+              "align-self": "flex-start",
+              "padding-right": "30px",
+              "p": {
+                "margin": "0",
+                "padding": "0"
+              }
+            },
+            ".brand-name": {
+              "color": "#ffffff"
+            },
+            ".sidebar": {
+              "padding": "1rem 0",
+              "margin": "0"
+            },
+            ".sidebar > li": {
+              "list-style": "none",
+              "display": "flex",
+              "flex-direction": "column"
+            },
+            ".sidebar a": {
+              "display": "block",
+              "text-decoration": "none",
+              "margin-bottom": "10px"
+            },
+            ".close-sidebar": {
+              "width": "30px",
+              "height": "30px",
+              "position": "relative",
+              "cursor": "pointer",
+              "background-color": "transparent",
+              "border": "none",
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "position": "absolute",
+                "left": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "transform": "rotate(45deg)"
+                },
+                "&:nth-child(2)": {
+                  "transform": "rotate(-45deg)"
+                }
+              }
+            },
+            "@media (min-width: 992px)": {
+              "& .brand-name": {
+                "min-width": "8rem"
+              },
+              "& .builder-sidebar": {
+                "margin-left": "auto",
+                ".sidebar li": {
+                  "flex-direction": "row",
+                  "flex-wrap": "wrap",
+                  "a": {
+                    "padding": ".5rem",
+                    "margin": "0"
+                  }
+                }
+              },
+              "& .builder-overlay": {
+                "display": "none !important"
+              }
+            },
+            ".hamburger": {
+              "position": "absolute",
+              "top": "25px",
+              "& when (@showLogo)": {
+                "@media (min-width: 768px)": {
+                  "top": "calc(0.5rem ~\"+\" @logoHeight ~\"*\" 0.5px ~\"-\" 10px)"
+                }
+              },
+              "right": "20px",
+              "margin-left": "auto",
+              "width": "30px",
+              "height": "20px",
+              "background": "none",
+              "border": "none",
+              "cursor": "pointer",
+              "z-index": "1000",
+              "&:focus": {
+                "outline": "none"
+              },
+              "span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "amp-img": {
+              "height": "~\"@{logoHeight}px\"",
+              "width": "~\"@{logoWidth}px\"",
+              "margin-right": "1rem",
+              "display": "flex",
+              "align-items": "center",
+              "@media (max-width: 768px)": {
+                "max-height": "55px",
+                "max-width": "55px"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global=\"\" once=\"menu\" always-top=\"\" position-absolute=\"\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n        <input type=\"range\" title=\"Logo Height\" inline=\"\" name=\"logoHeight\" min=\"55\" max=\"120\" value=\"55\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline=\"\" name=\"logoWidth\" min=\"55\" max=\"120\" value=\"120\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\">\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\" selected=\"\">Left</option>\n            <option value=\"right\">Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#0055a5\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"headerbar\" mbr-class=\"{'sticky-nav':sticky}\">\n      <div class=\"brand\">\n          <span mbr-if=\"showLogo\" class=\"brand-logo\">\n              <amp-img src=\"@PROJECT_PATH@/assets/images/logo-abs-cbn.png\" layout=\"responsive\" width=\"121.20689655172414\" height=\"19\" alt=\"Mobirise\">\n                  <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/logo-abs-cbn.png\" alt=\"Mobirise\" title=\"\">\n              </amp-img>\n          </span>\n          <p mbr-text=\"\" mbr-theme-style=\"display-7\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style\" data-app-selector=\".brand-name\">SPORTS</p>\n      </div>\n    </nav>\n    <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n        <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n            <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n                <span></span>\n                <span></span>\n            </button>\n\n            <div mbr-menu=\"\" class=\"sidebar mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\"><a class=\"text-white\" href=\"https://sports.abs-cbn.com/\" data-app-placeholder=\"Type Text\" target=\"_blank\">HOME</a>\n              <a class=\"text-white\" href=\"https://sports.abs-cbn.com/news\" data-app-placeholder=\"Type Text\" target=\"_blank\">NEWS</a>\n              <a class=\"text-white\" href=\"https://sports.abs-cbn.com/uaap\" data-app-placeholder=\"Type Text\" target=\"_blank\">UAAP</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/ncaa\" data-app-placeholder=\"Type Text\" target=\"_blank\">NCAA</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/pvl\" data-app-placeholder=\"Type Text\" target=\"_blank\">PVL</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/nba\" data-app-placeholder=\"Type Text\" target=\"_blank\">NBA</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/pba\" data-app-placeholder=\"Type Text\" target=\"_blank\">PBA</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/basketball\" data-app-placeholder=\"Type Text\" target=\"_blank\">BASKETBALL</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/volleyball\" data-app-placeholder=\"Type Text\" target=\"_blank\">VOLLEYBALL</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/onechampionship\" data-app-placeholder=\"Type Text\" target=\"_blank\">ONE CHAMPIONSHIP</a>  <a class=\"text-white\" href=\"https://sports.abs-cbn.com/photos\" data-app-placeholder=\"Type Text\" target=\"_blank\">PHOTOS</a> <a class=\"text-white\" href=\"https://sports.abs-cbn.com/videos\" data-app-placeholder=\"Type Text\" target=\"_blank\">VIDEOS</a></div>\n            \n            <div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn align-center\">\n              <a class=\"btn btn-sm btn-primary\" href=\"https://mobirise.com\">Contact Us</a>\n            </div>\n        </div>\n    </amp-sidebar>\n    <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-class=\"{'sticky-but':sticky}\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </button>\n</section>",
+          "_cid": "r8B7cdFFzD",
+          "_anchor": "menu1-s",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-title": {
+              "padding-bottom": "1rem",
+              "color": "#1580ea",
+              "text-align": "left"
+            },
+            ".mbr-section-btn": {
+              "padding-top": "1.5rem"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <h2 mbr-if=\"showTitle\" class=\"mbr-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-title\">\n            NBA</h2>\n        <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n            <i>Shape your future web project with sharp design and refine coded functions.</i>\n        </h3>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n            <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8B7cePXtx",
+          "_anchor": "content1-t",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-title": {
+              "padding-bottom": "1rem",
+              "text-align": "left"
+            },
+            ".mbr-section-btn": {
+              "padding-top": "1.5rem"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <h2 mbr-if=\"showTitle\" class=\"mbr-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-title\">ON THIS DATE: James Harden Drops 56 Vs Jazz (11/5/17)\n        </h2>\n        <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n            <i>Shape your future web project with sharp design and refine coded functions.</i>\n        </h3>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n            <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8B7cfzIcd",
+          "_anchor": "content1-u",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-title": {
+              "padding-bottom": "1rem",
+              "text-align": "left"
+            },
+            ".mbr-section-btn": {
+              "padding-top": "1.5rem"
+            },
+            ".mbr-title SPAN": {
+              "color": "#15181b"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <h2 mbr-if=\"showTitle\" class=\"mbr-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-title\"><span style=\"font-weight: normal;\">Nov 06, 2018 10:17 AM</span></h2>\n        <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n            <i>Shape your future web project with sharp design and refine coded functions.</i>\n        </h3>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n            <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8B7cfXRRf",
+          "_anchor": "content1-v",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "margin-bottom": "1rem"
+            }
+          },
+          "_name": "header4",
+          "_customHTML": "<section class=\"header4\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" selected=\"\">\n            <input type=\"color\" title=\"Background Color\" value=\"#15181b\"> \n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <h1 class=\"mbr-fonts-style mbr-section-title align-left mbr-black mbr-bold\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n            Mobirise AMP Theme\n        </h1>\n        <h2 class=\"mbr-fonts-style mbr-section-subtitle align-left mbr-black mbr-light\" mbr-theme-style=\"display-2\" mbr-if=\"showText\" data-app-selector=\".mbr-section-subtitle, .mbr-section-btn\">\n            Building the future web, together\n        </h2>\n        <div class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons=\"\" mbr-theme-style=\"display-4\">\n            <a class=\"btn btn-md btn-black\" href=\"https://mobirise.com\">\n                TRY IT\n            </a>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8B7XIXq8Y",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header4-10"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "h1": {
+              "margin-bottom": "20px"
+            },
+            ".wrapper": {
+              "text-align": "center"
+            },
+            "H1": {
+              "text-align": "center"
+            }
+          },
+          "_name": "social-share",
+          "_customHTML": "<section class=\"social-share\" group=\"Social\" plugins=\"amp-main,amp-social-share\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"checkbox\" title=\"Email\" name=\"email\">\n        <input type=\"checkbox\" title=\"Facebook\" name=\"facebook\" checked>\n        <input type=\"checkbox\" title=\"Google+\" name=\"gplus\">\n        <input type=\"checkbox\" title=\"Linkedin\" name=\"linkedin\">\n        <input type=\"checkbox\" title=\"Pinterest\" name=\"pinterest\">\n        <input type=\"checkbox\" title=\"Tumblr\" name=\"tumblr\">\n        <input type=\"checkbox\" title=\"Twitter\" name=\"twitter\" checked>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"wrapper\">\n        <h1 class=\"mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n            Share this page\n        </h1>\n        <amp-social-share type=\"email\" mbr-if=\"email\"></amp-social-share>\n        <amp-social-share type=\"facebook\" mbr-if=\"facebook\" data-param-app_id=\"254325784911610\"></amp-social-share>\n        <amp-social-share type=\"gplus\" mbr-if=\"gplus\"></amp-social-share>\n        <amp-social-share type=\"linkedin\" mbr-if=\"linkedin\"></amp-social-share>\n        <amp-social-share type=\"pinterest\" mbr-if=\"pinterest\" data-param-media=\"https://ampbyexample.com/img/amp.jpg\"></amp-social-share>\n        <amp-social-share type=\"tumblr\" mbr-if=\"tumblr\"></amp-social-share>\n        <amp-social-share type=\"twitter\" mbr-if=\"twitter\"></amp-social-share>\n    </div>\n</section>",
+          "_cid": "r8B7chAUcM",
+          "_anchor": "social-share-y",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "p": {
+              "margin": "0",
+              "color": "#ffffff"
+            },
+            ".mbr-col-sm-12, .mbr-text": {
+              "text-align": "center"
+            }
+          },
+          "_name": "footer1",
+          "_customHTML": "<section class=\"footer1\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-col-sm-12 align-center mbr-white\">\n            <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-col-sm-12, .mbr-text\" data-app-placeholder=\"Type Text\">\n                © 2018 ABS-CBN Corporation. All Rights Reserved.\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "r8B7cjoe3H",
+          "_anchor": "footer1-z",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
